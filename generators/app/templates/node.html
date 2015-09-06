@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    RED.nodes.registerType('<%= nodeName %>',{
+        category: '<%= category %>',
+        color: '<%= color %>',
+        inputs:<%= io.inputs %>,
+        outputs:<%= io.outputs %>,
+        label: function() {
+            return this.name||"<%= nodeDisplayName %>'";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="<%= nodeName %>">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="<%= nodeName %>">
+    <p>Description</p>
+</script>
